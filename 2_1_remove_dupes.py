@@ -31,13 +31,9 @@ def remove_dupes_no_addtl_mem(node):
 
     first_ptr = node
     while first_ptr:
-
-        # curr_val = first_ptr.val
-
         second_ptr = first_ptr
         while second_ptr:
             if second_ptr.next and second_ptr.next.val == first_ptr.val:
                 second_ptr.next = second_ptr.next.next
             second_ptr = second_ptr.next
-
         first_ptr = first_ptr.next
