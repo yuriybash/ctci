@@ -1,8 +1,8 @@
 class Node(object):
 
-    def __init__(self, val, next=None):
+    def __init__(self, val, next_=None):
         self.val = val
-        self.next = next
+        self.next_ = next_
 
     def __repr__(self):
         return 'Node(x=%s)' % self.val
@@ -14,7 +14,7 @@ def kth_to_last(head, k):
     node = head
     while node:
         count += 1
-        node = node.next
+        node = node.next_
 
     node = head
     target = count - k
@@ -23,4 +23,4 @@ def kth_to_last(head, k):
         if count == target:
             return node
         count += 1
-        node = node.next
+        node = node.next_
